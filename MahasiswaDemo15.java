@@ -1,11 +1,14 @@
 import java.util.Scanner;
 public class MahasiswaDemo15 {
 public static void main(String[] args) {
-    MahasiswaBerprestasi15 list = new MahasiswaBerprestasi15();
     Scanner input15 = new Scanner (System.in);
-    int jumMhs=5;
+    
+    MahasiswaBerprestasi15 list = new MahasiswaBerprestasi15();
+    System.out.println("Masukkan jumlah data mahasiswa : ");
+    int jumlah = input15.nextInt();
+    input15.nextLine();
 
-    for (int i = 0; i < jumMhs; i++) {
+    for (int i = 0; i < jumlah; i++) {
         System.out.println("Masukkan Data Mahasiswa ke-" + (i+1));
         System.out.print("NIM : ");
         String nim = input15.nextLine();
@@ -44,7 +47,7 @@ public static void main(String[] args) {
          System.out.println("-----------------------------------------");
          System.out.println("menggunakan binary search");
          System.out.println("-----------------------------------------");
-         double posisi2 = list.findBinarySearch(cari, 0, jumMhs-1);
+         double posisi2 = list.findBinarySearch(cari, 0, jumlah-1);
          int pss2 = (int)posisi2;
          list.tampilPosisi(cari, pss2);
          list.tampilDataSearch(cari, pss2);
